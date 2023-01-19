@@ -13,7 +13,7 @@ export function getAllWithdrawals(array) {
       }
       tempArray.push(sum);
     } else {
-      tempArray.push(0)
+      tempArray.push(0);
     }
   }
   return tempArray;
