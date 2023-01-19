@@ -6,10 +6,12 @@
 // NOTE: You can NOT use the array.flat() method in your code
 
 export function flatArrays(array) {
-  // Your code goes here...
-
+  let tempArray = [];
+  for (const item of array) {
+    tempArray.push(...item);
+  }
+  return tempArray;
 }
-
 
 
 // === TEST YOURSELF ===
