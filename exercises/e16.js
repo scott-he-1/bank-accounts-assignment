@@ -8,7 +8,9 @@
 export function flatArrays(array) {
   let tempArray = [];
   for (const item of array) {
-    tempArray.push(...item);
+    for (const letter of item) {
+      tempArray.push(letter);
+    }
   }
   return tempArray;
 }

@@ -6,8 +6,12 @@
 export function getClientsWithLetterInName(array, letter) {
   let tempArray = [];
   for (const person of array) {
-    if (person.name.includes(letter.toUpperCase()) || person.name.includes(letter.toLowerCase())) {
-      tempArray.push(person.name);
+    for (const character of person.name) {
+      let hasLetterAlready = false;
+      if ((character === letter.toUpperCase() || character === letter.toLowerCase()) && (hasLetterAlready === false)) {
+        hasLetterAlready = true;
+        tempArray.push(person.name);
+      }
     }
   }
   return tempArray;
